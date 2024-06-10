@@ -1,0 +1,33 @@
+<html>
+  <body>
+    <h1>Paper Calculator</h1>
+    <input type="text" id="display" value="" readonly>
+    <table>
+      <tr>
+        <td><button onclick="appendDigit(1)">1</button></td>
+        <td><button onclick="appendDigit(2)">2</button></td>
+        <td><button onclick="appendDigit(3)">3</button></td>
+        <td><button onclick="doOperation('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="appendDigit(4)">4</button></td>
+        <td><button onclick="appendDigit(5)">5</button></td>
+        <td><button onclick="appendDigit(6)">6</button></td>
+        <td><button onclick="doOperation('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="appendDigit(7)">7</button></td>
+        <td><button onclick="appendDigit(8)">8</button></td>
+        <td><button onclick="appendDigit(9)">9</button></td>
+        <td><button onclick="doOperation('*')">*</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="appendDigit(0)">0</button></td>
+        <td><button onclick="clear()">Clear</button></td>
+        <td><button onclick="doOperation('/')">/</button></td>
+        <td><button onclick="calculate()">=</button></td>
+      </tr>
+    </table>
+    <script src="calculator.js"></script>
+  </body>
+</html>
