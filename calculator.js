@@ -1,19 +1,23 @@
 let currentNumber = "";
 let previousNumber = "";
 let operation = "";
+console.log("Program Start");
 
 function appendDigit(digit) {
+  console.log("Digit appended");
   currentNumber += digit;
   document.getElementById("display").value = currentNumber;
 }
 
 function doOperation(op) {
+  console.log("Operation done")
   previousNumber = currentNumber;
   currentNumber = "";
   operation = op;
 }
 
 function calculate() {
+  console.log("Calculation running");
   let result = 0;
   switch (operation) {
     case "+":
@@ -34,6 +38,7 @@ function calculate() {
 }
 
 function clear() {
+  console.log("The clear button has been pressed.");
   currentNumber = "";
   previousNumber = "";
   operation = "";
