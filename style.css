@@ -1,62 +1,90 @@
-/* Global styles */
-* {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    background-color: #f9f9f9; /* Light gray background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  /* Calculator styles */
-  -calculator {
-    background-color: #fff; /* White background */
-    padding: 20px;
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    width: 250px; /* Adjust width to your liking */
-  }
-  
-  #display {
-    background-color: #eee; /* Light gray background */
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    height: 30px;
-    font-size: 18px;
-    text-align: right;
-    margin-bottom: 10px;
-  }
-  
-  table {
-    border-collapse: collapse;
-    margin: 0 auto;
-  }
-  
-  td {
-    padding: 10px;
-    border: 1px solid #ddd; /* Light gray border */
-    width: 25%;
-  }
-  
-  button {
-    background-color: #fff; /* White background */
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    height: 30px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ccc; /* Light gray hover color */
-  }
+/* Style the body with a light background and a sans-serif font */
+body {
+  background-color: #f5f5f5;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the calculator container with a border, a slight shadow, and a fixed width */
+.calculator {
+  width: 300px; /* Adjust width as needed */
+  margin: 100px auto; /* Centering with auto margins */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #eaeaea;
+}
+
+/* Center the h1 element within the calculator with class selector and reset margins */
+h1 {
+  font-size: 24px;
+  padding: 20px 0;
+  background-color: #e0e0e0;
+  text-align: center; /* Ensures centering */
+  margin: 0 auto; /* Reset margins for centering */
+}
+
+/* Style the display input with a light background, readonly property and a large font */
+#display {
+  width: 280px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #fafafa;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  text-align: right;
+  readonly;
+}
+
+/* Style the table with no border collapse and spacing between cells */
+table {
+  width: 100%; /* Fills the calculator width */
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+/* Style the table cells with padding and a hover effect */
+td {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Style the buttons with a light background, border, and rounded corners */
+button {
+  width: 100%;
+  height: 50px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style the operation buttons with a light blue background */
+td button[onclick*="doOperation"] {
+  background-color: #ADD8E6; /* Light blue color */
+}
+
+/* Style the backspace button to span two columns */
+td button[onclick="backspace()"] {
+  padding-left: 10px; /* Add some padding to center the text */
+  box-sizing: border-box; /* Ensure the padding is included in the width */
+}
+
+td button[onclick="calculate()"] {
+  padding-left: 10px; /* Add some padding to center the text */
+  box-sizing: border-box; /* Ensure the padding is included in the width */
+}
+
+/* Style the buttons on hover with a slight shadow */
+button:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the clear and equals buttons with a different background color  */
+.btn-clear,
+.btn-equals {
+  background-color: #e0e0e0;
+}

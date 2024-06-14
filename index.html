@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html>
   <head>
         <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <div class="calculator">
     <h1>Paper Calculator</h1>
     <input type="text" id="display" value="" readonly>
     <table>
@@ -26,11 +28,16 @@
       </tr>
       <tr>
         <td><button onclick="appendDigit(0)">0</button></td>
-        <td><button onclick="clear()">Clear</button></td>
+        <td><button onclick="appendDot()">.</button></td>
+        <td><button onclick="clearDisplay()">Clear</button></td>
         <td><button onclick="doOperation('/')">/</button></td>
-        <td><button onclick="calculate()">=</button></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button onclick="calculate()">=</button></td>
+        <td colspan="2"><button onclick="backspace()">Backspace</button></td>
       </tr>
     </table>
+    </div>
     <script src="calculator.js"></script>
   </body>
 </html>
